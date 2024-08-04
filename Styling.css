@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title {
+    font-size: 3rem;
+    margin: 6vh;
+    border: 0.3rem dashed rgb(1, 17, 160);  
+    border-radius: 2rem;
+    padding: 1vh 5vw;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.Cards {
+    width: 21.875rem; /* 350px to rem */
+    height: max-content;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.image {
+    width: 100%; /* Ensure image scales with the card */
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.tour-info {
+    margin: 1.25rem 0.3125rem; /* 20px 5px to rem */
+}
+
+.Tour-price {
+    color: #1faa59;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.Tour-price-name {
+    color: #080a09;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.read-more {
+    color: #12b0e8;
+    cursor: pointer;
+}
+
+.btn-red {
+    margin-top: 0.125rem; /* 2px to rem */
+    padding: 0.625rem 5rem; /* 10px 80px to rem */
+    border: 0.0625rem solid #b4161b; /* 1px to rem */
+    cursor: pointer;
+    border-radius: 0.625rem; /* 10px to rem */
+    font-size: 1.125rem; /* 18px to rem */
+    font-weight: bold;
+    background-color: #b4161b21;
+}
+
+.btn-red:hover {
+    background-color: red;
+    color: white;
+    transform: all 0.2s;
+}
+
+.refresh {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: larger;
+    font-weight: 700;
+    gap: 1rem;
+}
+
+.btn-white {
+    color: black;
+    border-radius: 0.3125rem; /* 5px to rem */
+    padding: 0.625rem 5rem; /* 10px 80px to rem */
+    margin-top: 1.125rem; /* 18px to rem */
+    border: 0.0625rem solid rgb(100, 97, 97); /* 1px to rem */
+    cursor: pointer;
+}
+
+.btn-white:hover {
+    background-color: red;
+    color: white;
+    transform: all 0.2s;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    #title {
+        font-size: 2.5rem;
+        margin: 4vh;
+    }
+
+    .Cards {
+        width: 18.75rem; /* 300px to rem */
+    }
+}
+
+@media (max-width: 992px) {
+    #title {
+        font-size: 2rem;
+        margin: 4vh;
+    }
+
+    .Cards {
+        width: 16.25rem; /* 260px to rem */
+    }
+}
+
+@media (max-width: 768px) {
+    #title {
+        font-size: 1.75rem;
+        margin: 3vh;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .Cards {
+        width: 100%; /* Full width */
+    }
+
+    .btn-red, .btn-white {
+        padding: 0.5rem 4rem; /* 8px 64px to rem */
+    }
+}
+
+@media (max-width: 576px) {
+    #title {
+        font-size: 1.5rem;
+        margin: 2vh;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .Cards {
+        width: 100%; /* Full width */
+    }
+
+    .btn-red, .btn-white {
+        padding: 0.5rem 3rem; /* 8px 48px to rem */
+    }
+}
